@@ -1,0 +1,32 @@
+<input type="text" ng-model="favM" placeholder="Enter your name" /> 
+<p>Hello {{favM +" is " + numbers[0]}} !!</p>
+<!-- <li ng-repeat="num in numbers">{{num}}  </li> -->
+<button ng-click="order='name'">Sort by name</button>
+<button ng-click="order='pts'">Sort by points</button>
+<!-- <main ng-view></main> -->
+<div class="content">
+  <!-- <div ng-controller="NinjaController">
+     -->
+    <div class="row mb-4">
+      <button ng-click="showall() " class="float-left">Show all Heroes</button>
+      <button ng-click="reload()" class="btn  btn-primary float-left">Reload</button>
+    </div>
+    <!-- <li>{{arpa}}</li> -->
+    <ul id="heros">
+      <li ng-repeat="ninja in arpa | orderBy: order | filter: favM " ng-hide="!ninja.avail" >
+        <img src="{{ninja.img || ''}}" class="img-responsive size-20" ng-show="{{ninja.img}}">
+        Hiii {{ninja.name }}.  You have {{ninja.pts}} points  
+        <span class="{{ninja.color}}" ng-click="removeHero()" style="margin-right: 20px;">x</span>
+      </li>
+      <p>{{para1}}</p>
+    </ul>
+    <form ng-submit="subform()">
+      <input type="text" ng-model="hero.name" placeholder="Name">
+      <input type="number" ng-model="hero.pts"   placeholder="points" min="50" aria-errormessage="Minimum 50">
+      <input type="text" ng-model="hero.color" placeholder="Color">
+      <input type="submit" value="Submit">
+    </form>
+  <!-- </div> -->
+  <button class="btn btn-primary" ng-click="removeAll()">Remove All</button>
+
+</div>

@@ -1,0 +1,6 @@
+<p>{{title}}</p>
+<ul>
+    <li ng-repeat="hero in hero"><img src="{{hero.img}}" alt="Pic not Available" class="" style="width: 50px;"> {{hero.name}} :- {{hero.pts}} points</li>
+</ul>
+<div ng-transclude></div>
+<p>Random hero is  : {{hero[randomVal].name}}   {{randomVal}}</p>

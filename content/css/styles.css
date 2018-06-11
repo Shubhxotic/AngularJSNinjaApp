@@ -7,6 +7,12 @@ h1,h2,h3{
   margin: 0;
 }
 
+.red{
+  color: red;
+}
+.bg-red{
+  background: red;
+}
 .belt{
   padding: 5px 10px;
   border-radius: 10px;
@@ -117,4 +123,45 @@ main{
   color: crimson;
   cursor: pointer;
   margin-left: 10px;
+}
+
+.size-20{
+  background: #333;
+  border-radius: 100%;
+  width: 120px;
+}
+
+main.ng-enter {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+main.ng-enter.ng-enter-active{
+  opacity: 1;
+}
+
+
+#heros li.ng-enter{
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(60px);
+}
+#heros li.ng-enter.ng-enter-active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+#heros li.ng-leave{
+  transition: all 0.5s ease-out;
+  opacity: 1;
+  transform: translateX(100px);
+}
+#heros li.ng-leave.ng-leave-active{
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+#heros li.ng-leave-stagger{
+  transition-delay: 0.3s;
+  transition-duration: 0ms;
 }

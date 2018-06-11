@@ -1,0 +1,19 @@
+[{
+	"name": "Shubham",
+	"pts": 213123,
+	"color": "red",
+	"avail": true,
+	"img": "https://docs.angularjs.org/img/angularjs-for-header-only.svg"
+}, {
+	"color": "red",
+	"name": "Agar",
+	"pts": 421,
+	"avail": false,
+	"img": "https://docs.angularjs.org/img/angularjs-for-header-only.svg"
+}, {
+	"name": "yolo",
+	"color": "red",
+	"pts": 51,
+	"avail": true,
+	"img": "https://docs.angularjs.org/img/angularjs-for-header-only.svg"
+}]
