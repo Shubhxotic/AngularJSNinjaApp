@@ -59,6 +59,7 @@ main{
 
 .content{
   padding: 20px;
+  display: block;
 }
 
 .content button,
@@ -164,4 +165,11 @@ main.ng-enter.ng-enter-active{
 #heros li.ng-leave-stagger{
   transition-delay: 0.3s;
   transition-duration: 0ms;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+input[type=submit][disabled=disabled]{
+  opacity: 0.4;
 }

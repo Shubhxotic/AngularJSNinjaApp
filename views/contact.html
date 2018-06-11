@@ -1,5 +1,31 @@
-<form action="#!/contact" class="content">
-    <input type="email" name="email" id="email" placeholder="Enter Email">
-    <input type="text" name="name" id="name" placeholder="Name">
-    <input type="submit" value="Send">
-</form>
+<div class="content">
+        <p>AppName = {{nameApp}}</p>
+
+    <form name="contactForm" novalidate  ng-submit="submitForm();">
+        <input type="email" name="email" id="email" placeholder="Enter Email" ng-required="true" ng-model="contact.email">
+        <!-- <span>{{contactForm.email.$dirty}}
+            {{contactForm.name.$pristine}}
+        </span> -->
+        <div ng-show="contactForm.email.$invalid && contactForm.email.$touched">
+            <small style="color: red; text-align: center; display: block;" class="text-danger w-100 text-center">
+                Enter a valid email
+            </small>
+        </div>          
+        <input type="text" name="name" id="name" placeholder="Name" ng-required="true" ng-model="contact.name">
+
+        <div ng-show="contactForm.name.$invalid && contactForm.name.$touched">
+                <small style="color: red; text-align: center; display: block;" class="text-danger w-100 text-center">
+                    Enter a valid name
+                </small>
+            </div>
+        <input type="text" name="message" id="message" placeholder="Leave a message" ng-required="true" ng-model="contact.message">
+
+        <div ng-show="contactForm.message.$invalid && contactForm.message.$touched">
+                <small style="color: red; text-align: center; display: block;" class="text-danger w-100 text-center">
+                    Enter a valid message
+                </small>
+            </div>
+        <input type="submit" name="submit" value="Send" ng-disabled="contactForm.$invalid">
+    </form>
+</div>
+
