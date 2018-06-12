@@ -1,16 +1,23 @@
-<input type="text" ng-model="favM" placeholder="Enter your name" /> 
-<p>Hello {{favM +" is " + numbers[0]}} !!</p>
+<div class="text-center">
+<input type="text" ng-model="favM" placeholder="Search" style="align-self: center;" class="w-75"/> <br><br> 
+<!-- <p>Hello {{favM +" is " + numbers[0]}} !!</p> -->
 <!-- <li ng-repeat="num in numbers">{{num}}  </li> -->
-<button ng-click="order='name'">Sort by name</button>
-<button ng-click="order='pts'">Sort by points</button>
+<div style="" class="row">
+  <div class="col-2"></div>
+  <button class="col-4 btn btn-secondary"  ng-click="order='name'">Sort by name</button>
+  
+  <button class="col-4 btn btn-secondary"  ng-click="order='pts'">Sort by points</button>
+</div>
 <!-- <main ng-view></main> -->
 <div class="content">
   <!-- <div ng-controller="NinjaController">
      -->
      <!-- <random-hero></random-hero> -->
     <div class="row mb-4">
-      <button ng-click="showall() " class="float-left">Show all Heroes</button>
-      <button ng-click="reload()" class="btn  btn-primary float-left">Reload</button>
+        <div class="col-2"></div>
+      <button ng-click="showall() " class="float-left col-4">Show all Heroes</button>
+      
+      <button ng-click="reload()" class="btn  btn-primary col-4 float-left">Reload</button>
     </div>
     <!-- <li>{{arpa}}</li> -->
     <ul id="heros">
@@ -19,7 +26,7 @@
         Hiii {{ninja.name }}.  You have {{ninja.pts}} points  
         <span class="{{ninja.color}}" ng-click="removeHero()" style="margin-right: 20px;">x</span>
       </li>
-      <p>{{para1}}</p>
+<br>      <h1>{{para1}}</h1>
     </ul>
     <form ng-submit="subform()">
       <input type="text" ng-model="hero.name" placeholder="Name">
@@ -30,4 +37,5 @@
   <!-- </div> -->
   <button class="btn btn-primary" ng-click="removeAll()">Remove All</button>
 
+</div>
 </div>

@@ -1,5 +1,5 @@
 
-mycont.controller('NinjaController', ['$scope','$http', function($scope, $http){
+mycont.controller('NinjaController', ['$scope','$http','$location' , function($scope, $http, $location){
     // $scope.arpa = [{name: "Shubham", pts: 213123, color: "red", avail: true, img: "https://docs.angularjs.org/img/angularjs-for-header-only.svg"}, { color: "red",name: "Agar", pts: 421, avail: false,img: "https://docs.angularjs.org/img/angularjs-for-header-only.svg"}, {name: "yolo", color: "red", pts: 51, avail: true,img: "https://docs.angularjs.org/img/angularjs-for-header-only.svg"}];
     $scope.para1 = "Add Hero";
     $scope.removeHero = function(hero){
@@ -16,7 +16,8 @@ mycont.controller('NinjaController', ['$scope','$http', function($scope, $http){
     $scope.reload = function(){
         if(confirm("Are You Sure?")){
             alert("Reloading..");
-            location.reload();
+            // location.reload();
+            $location.path("/");
         }
     }
     $scope.subform= function(){

@@ -4,6 +4,10 @@ mycont.config(['$routeProvider',"$locationProvider" , function($routeProvider, $
 
     $locationProvider.html5Mode(true);
     $routeProvider
+    .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'NinjaController'
+    })
     .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'NinjaController'
