@@ -22,7 +22,7 @@
     <!-- <li>{{arpa}}</li> -->
     <ul id="heros">
       <li ng-repeat="ninja in arpa | orderBy: order | filter: favM " ng-hide="!ninja.avail" >
-        <img src="{{ninja.img || ''}}" class="img-responsive size-20" ng-show="{{ninja.img}}">
+        <img src="{{ninja.img}}" class="img-responsive size-20" ng-show="{{ninja.img}}">
         Hiii {{ninja.name }}.  You have {{ninja.pts}} points  
         <span class="{{ninja.color}}" ng-click="removeHero()" style="margin-right: 20px;">x</span>
       </li>
